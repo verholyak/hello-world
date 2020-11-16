@@ -25,14 +25,14 @@ pipeline {
                 }
             }
         }
-        stage('CreateDockerImageForK8s') { 
+        stage('CreateDockerImage') { 
             steps {
                 sshagent(['ssh-key-jenkins-to-git']) { 
                 sh "ansible-playbook -i /opt/hosts /opt/dev_env/kubernetes/playbook-create-devops-image.yml --limit localhost"
                 }
             }
         }
-        stage('DeployDockerImageForK8s') { 
+        stage('DeployDockerImage') { 
             steps {
                 sshagent(['local-user']) { 
                 sh "ansible-playbook -i /opt/hosts /opt/dev_env/kubernetes/playbook-k8s-gcp-config-deploy.yaml --limit localhost"
