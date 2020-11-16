@@ -53,13 +53,14 @@ function write_argument()
 function argument_1()
 {
     git checkout tester
-    cp $home_dir/examlpe-index/index-1.jsp $home_dir/webapp/src/main/webapp/index.jsp
+    cp $home_dir/hello-world/examlpe-index/index-1.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
     git add index.jsp
     git commit -m "change index-1"
     git push --all
     git merge master
     git checkout master
-    git merge tester
+    git merge tester 
+    #git merge -m "merge tester changes 1" tester --no-ff
     git add .
     git commit -m "merge tester changes 1"
     git push --all
@@ -72,7 +73,7 @@ function argument_1()
 function argument_2()
 {
     git checkout tester
-    cp $home_dir/examlpe-index/index-2.jsp $home_dir/webapp/src/main/webapp/index.jsp
+    cp $home_dir/hello-world/examlpe-index/index-2.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
     git add index.jsp
     git commit -m "change index-2"
     git push --all
@@ -91,7 +92,7 @@ function argument_2()
 function argument_3()
 {
     git checkout tester
-    cp $home_dir/examlpe-index/index-3.jsp $home_dir/webapp/src/main/webapp/index.jsp
+    cp $home_dir/hello-world/examlpe-index/index-3.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
     git add index.jsp
     git commit -m "change index-3"
     git push --all
@@ -110,7 +111,7 @@ function argument_3()
 function argument_e()
 {
     git checkout tester
-    cp $home_dir/examlpe-index/index-error.jsp $home_dir/webapp/src/main/webapp/index.jsp
+    cp $home_dir/hello-world/examlpe-index/index-error.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
     git add index.jsp
     git commit -m "change index-e"
     git push --all
