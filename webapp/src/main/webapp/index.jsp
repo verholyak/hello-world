@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ht>
 head>
 <title>Simple Web Page</tile>
@@ -11,3 +12,18 @@ fnt color="bla">Made by Volodymyr Verholyak<r><br>
 <p alig"center" style="ont-size:160%;">You are on the TomCat Server</p>
 <p align="center" styl"font-ze:160%;"><a hre="http://35.214.209.115:8081/examples/servlets/">Servlet Examples with Code</a></p>
 </body
+=======
+<html>
+<head>
+<title>Simple Web Page</title>
+</head>
+<body style="background-color:green;"></body>
+<font color="black">Made by Volodymyr Verholyak<br><br>
+<font color="black">Make changes by git tester user<br><br>
+<font color="black">
+<h1 align="center" style="font-size:300%;">Hello World!</h1>
+<p align="center" style="font-size:160%;">You are on the TomCat Server</p>
+<p align="center" style="font-size:160%;"><a href="http://35.214.209.115:8081/examples/servlets/">Servlet Examples with Code</a></p>
+</body>
+</html>
+>>>>>>> tester
