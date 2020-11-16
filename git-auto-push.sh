@@ -59,11 +59,21 @@ function argument_1()
     cp $home_dir/examlpe-index/index-1.jsp $home_dir/webapp/src/main/webapp/index.jsp
     git add -A
     git commit -m "change index-1"
+<<<<<<< HEAD
     git checkout master
     git merge tester 
     git add -A
     git commit -m "merge tester changes 1"
     git push origin
+=======
+    git push --all
+    #git merge master
+    git checkout master
+    git merge -m "merge tester changes 1" tester --no-ff
+    #git add .
+   # git commit -m "merge tester changes 1"
+    git push --all
+>>>>>>> tester
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
