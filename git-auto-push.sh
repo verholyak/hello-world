@@ -59,13 +59,11 @@ function argument_1()
     cp $home_dir/examlpe-index/index-1.jsp $home_dir/webapp/src/main/webapp/index.jsp
     git add -A
     git commit -m "change index-1"
-<<<<<<< HEAD
     git checkout master
     git merge tester 
     git add -A
     git commit -m "merge tester changes 1"
     git push origin
-=======
     git push --all
     #git merge master
     git checkout master
@@ -73,7 +71,6 @@ function argument_1()
     #git add .
    # git commit -m "merge tester changes 1"
     git push --all
->>>>>>> tester
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
@@ -82,7 +79,7 @@ function argument_1()
 
 function argument_2()
 {
-    git checkout tester
+    git checkout -b tester
     cp $home_dir/examlpe-index/index-2.jsp $home_dir/webapp/src/main/webapp/index.jsp
     git add -A
     git commit -m "change index-2"
@@ -91,6 +88,7 @@ function argument_2()
     git add -A
     git commit -m "merge tester changes 2"
     git push origin
+    git branch -D tester
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
