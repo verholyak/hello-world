@@ -15,7 +15,7 @@ pipeline {
         stage('TestMaven') { 
             steps {
 //               sh "${mvnHome}/bin/mvn clean package"
-                sh "${mvnHome}/bin/mvn install -Dmaven.test.failure.ignore=true"
+                sh "${mvnHome}/bin/mvn -fn test"
                 sh "mv webapp/target/*.war /opt/dev_env/docker/webapp.war"
             }
         }
