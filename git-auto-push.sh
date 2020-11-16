@@ -41,7 +41,7 @@ function write_argument()
     then
         echo -e "${BLUE}.......................................... Bye !${NOCOLOR}\n"
         exit
-    elif
+    else
         echo -e "${BLUE}Wrong Key !!! Please read the manual (--man) !!!${NOCOLOR}\n"
         read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
         echo
