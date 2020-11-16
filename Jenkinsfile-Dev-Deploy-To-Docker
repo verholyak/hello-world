@@ -14,7 +14,8 @@ pipeline {
 //        }
         stage('TestMaven') { 
             steps {
-                sh "${mvnHome}/bin/mvn surefire-report:report"
+//               sh "${mvnHome}/bin/mvn clean package"
+                sh "${mvnHome}/bin/mvn clean install"
                 sh "mv webapp/target/*.war /opt/dev_env/docker/webapp.war"
             }
         }
