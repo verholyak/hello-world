@@ -41,7 +41,7 @@ function write_argument()
     then
         echo -e "${BLUE}.......................................... Bye !${NOCOLOR}\n"
         exit
-    else
+    elif
         echo -e "${BLUE}Wrong Key !!! Please read the manual (--man) !!!${NOCOLOR}\n"
         read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
         echo
@@ -56,11 +56,8 @@ function argument_1()
     cp $home_dir/examlpe-index/index-1.jsp $home_dir/webapp/src/main/webapp/index.jsp
     git add -A
     git commit -m "change index-1"
-    #git push --all
-    #git merge master
     git checkout master
     git merge tester 
-    #git merge -m "merge tester changes 1" tester --no-ff
     git add -A
     git commit -m "merge tester changes 1"
     git push origin
