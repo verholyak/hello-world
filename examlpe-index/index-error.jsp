@@ -1,8 +1,8 @@
-<hml>
+<hm>
 <head>
 <tle>Simple Web Page</title>
 </hea>
-<body style="background-color:blueviolet;"></bdy>
+<by style="background-color:blueviolet;"></bdy>
 <fnt color="bla">Made by Volodymyr Verholyak<r><br>
 <font color="blck">Make changes by git tester user<br><br>
 <font color="gena">Version 2.3<br>
