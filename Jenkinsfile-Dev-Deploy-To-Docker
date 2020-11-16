@@ -14,7 +14,7 @@ pipeline {
 //        }
         stage('TestMaven') { 
             steps {
-                sh "${mvnHome}/bin/mvn clean compile test"
+                sh "${mvnHome}/bin/mvn clean package"
                 sh "mv webapp/target/*.war /opt/dev_env/docker/webapp.war"
             }
         }
