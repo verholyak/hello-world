@@ -14,8 +14,7 @@ pipeline {
 //        }
         stage('TestMaven') { 
             steps {
-                 sh "${mvnHome}/bin/mvn clean package"
-                 sh "${mvnHome}/bin/mvn clean package checkstyle:checkstyle"
+                 sh "${mvnHome}/bin/mvn clean package"                 
             }
         }
         stage('TestSonarQube') { 
