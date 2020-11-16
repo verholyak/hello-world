@@ -54,14 +54,14 @@ function argument_1()
 {
     git checkout tester
     cp $home_dir/hello-world/examlpe-index/index-1.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
-    git add index.jsp
+    git add -A
     git commit -m "change index-1"
-    git push --all
-    git merge master
+    #git push --all
+    #git merge master
     git checkout master
     git merge tester 
     #git merge -m "merge tester changes 1" tester --no-ff
-    git add .
+    git add -A
     git commit -m "merge tester changes 1"
     git push --all
     echo
