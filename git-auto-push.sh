@@ -55,7 +55,7 @@ function write_argument()
 
 function argument_1()
 {
-    git checkout tester
+    git checkout -b tester
     cp $home_dir/examlpe-index/index-1.jsp $home_dir/webapp/src/main/webapp/index.jsp
     git add -A
     git commit -m "change index-1"
@@ -64,13 +64,7 @@ function argument_1()
     git add -A
     git commit -m "merge tester changes 1"
     git push origin
-    git push --all
-    #git merge master
-    git checkout master
-    git merge -m "merge tester changes 1" tester --no-ff
-    #git add .
-   # git commit -m "merge tester changes 1"
-    git push --all
+    git branch -D tester
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
@@ -97,7 +91,7 @@ function argument_2()
 
 function argument_3()
 {
-    git checkout tester
+    git checkout -b tester
     cp $home_dir/examlpe-index/index-3.jsp $home_dir/webapp/src/main/webapp/index.jsp
     git add -A
     git commit -m "change index-3"
@@ -106,6 +100,7 @@ function argument_3()
     git add -A
     git commit -m "merge tester changes 3"
     git push origin
+    git branch -D tester
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
@@ -114,7 +109,7 @@ function argument_3()
 
 function argument_e()
 {
-    git checkout tester
+    git checkout -b tester
     cp $home_dir/examlpe-index/index-error.jsp $home_dir/webapp/src/main/webapp/index.jsp
     git add -A
     git commit -m "change index-e"
@@ -123,6 +118,7 @@ function argument_e()
     git add -A
     git commit -m "merge tester changes e"
     git push origin
+    git branch -D tester
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
