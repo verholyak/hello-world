@@ -63,7 +63,7 @@ function argument_1()
     #git merge -m "merge tester changes 1" tester --no-ff
     git add -A
     git commit -m "merge tester changes 1"
-    git push --all
+    git push --set-upstream origin
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
