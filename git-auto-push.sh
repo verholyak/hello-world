@@ -63,7 +63,7 @@ function argument_1()
     #git merge -m "merge tester changes 1" tester --no-ff
     git add -A
     git commit -m "merge tester changes 1"
-    git push --set-upstream origin
+    git push origin
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
@@ -74,15 +74,13 @@ function argument_2()
 {
     git checkout tester
     cp $home_dir/hello-world/examlpe-index/index-2.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
-    git add index.jsp
+    git add -A
     git commit -m "change index-2"
-    git push --all
-    git merge master
     git checkout master
     git merge tester
-    git add .
+    git add -A
     git commit -m "merge tester changes 2"
-    git push --all
+    git push origin
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
@@ -93,15 +91,13 @@ function argument_3()
 {
     git checkout tester
     cp $home_dir/hello-world/examlpe-index/index-3.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
-    git add index.jsp
+    git add -A
     git commit -m "change index-3"
-    git push --all
-    git merge master
     git checkout master
     git merge tester
-    git add .
+    git add -A
     git commit -m "merge tester changes 3"
-    git push --all
+    git push origin
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
@@ -112,15 +108,13 @@ function argument_e()
 {
     git checkout tester
     cp $home_dir/hello-world/examlpe-index/index-error.jsp $home_dir/hello-world/webapp/src/main/webapp/index.jsp
-    git add index.jsp
+    git add -A
     git commit -m "change index-e"
-    git push --all
-    git merge master
     git checkout master
     git merge tester
-    git add .
+    git add -A
     git commit -m "merge tester changes e"
-    git push --all
+    git push origin
     echo
     read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
     echo
