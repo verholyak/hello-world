@@ -14,7 +14,7 @@ pipeline {
 //        }
         stage('TestMaven') { 
             steps {
-                sh "${mvnHome}/bin/mvn clean package"
+                sh "${mvnHome}/bin/mvn -Dit.test=NameOfTheFailedIntegrationTest verify"
                 sh "mv webapp/target/*.war /opt/dev_env/docker/webapp.war"
             }
         }
