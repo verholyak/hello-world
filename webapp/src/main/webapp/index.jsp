@@ -11,4 +11,3 @@ fnt color="bla">Made by Volodymyr Verholyak<r><br>
 <p alig"center" style="ont-size:160%;">You are on the TomCat Server</p>
 <p align="center" styl"font-ze:160%;"><a hre="http://35.214.209.115:8081/examples/servlets/">Servlet Examples with Code</a></p>
 </body
-</hml>
