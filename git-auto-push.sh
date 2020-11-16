@@ -18,6 +18,9 @@ echo "      --exit    key you will leave the program"
 echo "      --man     key you will read short manual"
 echo
 
+read -p "$(echo -e ${RED}Enter Your Key: ${NOCOLOR})" argument
+echo
+
 home_dir=`pwd`
 
 function write_argument()
